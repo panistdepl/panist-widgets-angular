@@ -95,6 +95,7 @@
 }
 #istex-widget-results ol.istex-results-items li.istex-results-item ul.istex-results-item-download li.istex-results-item-dl a.istex-results-item-dl-pdf {
   background-image: url(../public/img/istexresults-item-dl-pdf.png);
+ 
 }
 #istex-widget-results ol.istex-results-items li.istex-results-item ul.istex-results-item-download li.istex-results-item-dl a.istex-results-item-dl-mods {
   background-image: url(../public/img/istexresults-item-dl-mods.png);
@@ -107,6 +108,8 @@
 }
 #istex-widget-results ol.istex-results-items li.istex-results-item ul.istex-results-item-download li.istex-results-item-dl a.istex-results-item-dl-tei {
   background-image: url(../public/img/istexresults-item-dl-tei.png);
+
+
 }
 #istex-widget-results ol.istex-results-items li.istex-results-item ul.istex-results-item-download li.istex-results-item-dl a.istex-results-item-dl-zip {
   background-image: url(../public/img/istexresults-item-dl-zip.png);

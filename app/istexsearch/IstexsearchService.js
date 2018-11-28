@@ -1,12 +1,12 @@
-
-
 app.factory('istexSearchService', ['$http', '$rootScope', function ($http, $rootScope) {
     return {
         search: function (scope) {
 
             // We create the url to call
-            var url = $rootScope.istexConfigDefault.istexApi; //vd panis
-            var idc = $rootScope.istexConfigDefault.idc; //On réscupére le trigramme couperin
+            var url = $rootScope.istexConfigDefault.istexApi; //vd panist
+            //var idc = $rootScope.istexConfigDefault.idc; //On réscupére le trigramme couperin
+            var idc = localStorage.getItem("idc"); //On réscupére le trigramme couperin
+            console.log($rootScope.idc);
             url += "/document/?q=";
             var query = (scope.query) ? scope.query.toString() : "";
             var advanced = this.advancedSearch(scope.advancedQuery);
@@ -18,10 +18,7 @@ app.factory('istexSearchService', ['$http', '$rootScope', function ($http, $root
                 url = $rootScope.istexConfigDefault.istexApi;
                 return $http.jsonp(url);
             }
-
             url += " &output=*";
-
-
             url += "&stats=1";
             if ($rootScope.defaultSort) {
                 url += "&sortBy=" + $rootScope.defaultSort;

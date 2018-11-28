@@ -378,7 +378,7 @@ Voici un exemple ;
 ```html
 <script>
     var istexConfig = {
-        idc="mettre ici le trigramme"
+        idc:"mettre ici le trigramme"
     };
 </script>
 ```
