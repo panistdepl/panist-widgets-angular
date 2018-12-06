@@ -6,14 +6,18 @@ app.factory('istexSearchService', ['$http', '$rootScope', function ($http, $root
             var url = $rootScope.istexConfigDefault.istexApi; //vd panist
             //var idc = $rootScope.istexConfigDefault.idc; //On réscupére le trigramme couperin
             var idc = localStorage.getItem("idc"); //On réscupére le trigramme couperin
-            console.log($rootScope.idc);
+            var selectedObj;
+            if (idc !=undefined)
+            {
+                selectedObj = JSON.parse(localStorage.getItem("idc"));
+            }
             url += "/document/?q=";
             var query = (scope.query) ? scope.query.toString() : "";
             var advanced = this.advancedSearch(scope.advancedQuery);
             url += (query != "") ? query : "*";
             url += (advanced != "") ? advanced : "";
-            if (idc) {
-                url += " AND grantees.raw:" + idc;
+            if (selectedObj) {
+                url += " AND grantees.raw:" + selectedObj.value.id;
             } else {
                 url = $rootScope.istexConfigDefault.istexApi;
                 return $http.jsonp(url);

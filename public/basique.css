@@ -3,9 +3,13 @@
     padding-right: 10px;
 }
 .istex-advanced-wrapper .istex-advanced .istex-advanced-name{
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
+    font-weight: bold;
 }
 
+.istex-advanced-name {
+    margin-bottom: 5px !important;
+}
 .istex-results-pagination ul{
     padding: 0;
 }

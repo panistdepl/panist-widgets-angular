@@ -11,7 +11,7 @@
     }
   ],
   "scripts": {
-    "js": "uglifyjs app/app.js app/istexfacets/IstexfacetsDirective.js app/istexfacets/IstexfacetsCtrl.js app/istexfacets/IstexfacetsService.js app/istexsearch/IstexsearchDirective.js app/istexsearch/IstexsearchCtrl.js app/istexsearch/IstexsearchService.js app/istexresults/IstexresultsDirective.js app/istexresults/IstexresultsCtrl.js app/istexresults/IstexresultsService.js app/istexconfigdefault.js -o public/app.min.js -cE",
+    "js": "uglifyjs app/app.js app/istexfacets/IstexfacetsDirective.js app/istexfacets/IstexfacetsCtrl.js app/istexfacets/IstexfacetsService.js app/istexsearch/IstexsearchDirective.js app/istexsearch/IstexsearchCtrl.js app/istexsearch/IstexsearchService.js app/istexselect2/Istexselect2Directive.js app/istexselect2/Istexselect2Ctrl.js app/istexselect2/Istexselect2Service.js app/istexresults/IstexresultsDirective.js app/istexresults/IstexresultsCtrl.js app/istexresults/IstexresultsService.js app/istexconfigdefault.js -o public/app.min.js -cE",
     "css": "cleancss -o public/style.min.css css/istexsearch.css css/istexfacets.css css/istexresults.css",
     "jscss": "npm run js && npm run css",
     "server": "http-server",

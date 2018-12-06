@@ -13,7 +13,7 @@ app.directive('istexResults', function () {
                 'Environ {{ total | numberize }} résultats <span title="Réseau : {{reseauSearchTime}} sec, Moteur de recherche : {{elasticSearchTime}} sec, Traitements de l\'API : {{istexSearchTime}} sec" ng-if="istexConfigDefault.showQuerySpeed">({{totalSearchTime}} secondes)</span>' +
             '</div>'+
             '<div class="istex-results-sort" >'+
-                '<select ng-model="defaultSort" ng-change="sortBy(defaultSort)" >'+
+                '<select class="input-sm form-control" ng-model="defaultSort" ng-change="sortBy(defaultSort)" >'+
                     '<option ng-repeat="sort in istexConfigDefault.possibleSorts" value="{{sort.value}}">{{sort.name}}</option>'+
                 '</select>'+
                 //<input type="checkbox" ng-model="badge.isChecked" ng-click="submitFacetSearch(aggregations)">

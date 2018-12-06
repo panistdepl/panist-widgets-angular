@@ -12,10 +12,10 @@
 	margin-right: 38%;
 	margin-top: 10px;
 	padding: 0.2em 0.4em;
-	color: #478DA7;
+	color: #337ab7;
 }
 #istex-widget-search .istex-search-form input.istex-search-submit:hover {
-	background-color: #478DA7;
+	background-color: #337ab7;
 	color: white;
 } 
 #istex-widget-search .istex-advanced-wrapper{
@@ -27,21 +27,21 @@
 	width: 15%;
 	text-align: center;
 	padding: 0.2em 0.4em;
-	color: #478DA7;
+	color: #337ab7;
 	border: 1px double #A5B8D3;
 	border-radius: 0.6em;
 	font-size: 14px;
-	color: #478DA7;
+	color: #337ab7;
 	font-weight: bold;
 	cursor: pointer;
 }
 #istex-widget-search .istex-advanced-wrapper .istex-advanced-button a{
-	color: #478DA7;
+	color: #337ab7;
 	text-decoration: none;
 	font-weight: bold;
 }
 #istex-widget-search .istex-advanced-wrapper .istex-advanced-button:hover{
-	background-color: #478DA7;
+	background-color: #337ab7;
 }
 #istex-widget-search .istex-advanced-wrapper .istex-advanced-button:hover a{
 	color: #FFF;
@@ -93,5 +93,5 @@ ol.istex-results-items istex-results-item b{
 
 /* Slider */
 rzslider span.rz-bar.rz-selection, rzslider span.rz-pointer{
-	background-color: #478DA7;
+	background-color: #337ab7;
 }

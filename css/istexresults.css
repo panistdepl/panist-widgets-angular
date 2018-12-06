@@ -26,7 +26,6 @@
   font-weight: bold;
   font-size: large;
   text-decoration: none;
-  color: #478DA7;
 }
 #istex-widget-results ol.istex-results-items li.istex-results-item p.istex-results-item-abstract {
   padding: 0;
@@ -47,9 +46,8 @@
   vertical-align: middle;
   font-family: monospace;
   float: right;
-  background-color: #B2C32E;
-  color: #FFF;
-  font-weight: bold;
+  background-color: #e8e8e8;
+  color: #5d5d5d;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -114,6 +112,9 @@
 #istex-widget-results ol.istex-results-items li.istex-results-item ul.istex-results-item-download li.istex-results-item-dl a.istex-results-item-dl-zip {
   background-image: url(../public/img/istexresults-item-dl-zip.png);
 }
+#istex-widget-results ol.istex-results-items li.istex-results-item ul.istex-results-item-download li.istex-results-item-dl a.istex-results-item-dl-json {
+  background-image: url(../public/img/istexresults-item-dl-json.png);
+}
 #istex-widget-results ol.istex-results-items li.istex-results-item div.istex-results-item-bottom {
   clear: both;
 }
@@ -144,7 +145,8 @@
 }
 #istex-widget-results .istex-results-pagination {
   margin: auto;
-  text-align: center;
+  text-align: left;
+  line-height: 30px;
 }
 #istex-widget-results .istex-results-pagination button {
   border: medium none;
@@ -228,4 +230,11 @@
 }
 #istex-widget-results ol.istex-results-items li.istex-results-item div.istex-results-item-corpusdiv.istex-hidebutton:active{
   background-color: #DBDBDB;
+}
+.download h4
+{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  color: grey;
 }

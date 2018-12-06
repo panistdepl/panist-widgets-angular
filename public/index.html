@@ -5,62 +5,46 @@
     <meta charset="UTF-8">
     <title>Istex - Widgets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-   -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="basique.css">
     <link rel="stylesheet" href="slider/rzslider.css">
     <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.css">
+    <style>
+        .navbar {
+            background-color: #2d2d2d;
+            text-align: center;
+        }
 
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-
-
-
-
+        .navbar-brand {
+            color: white;
+            width: 100%;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+    </style>
 </head>
 
 <body>
-
+    <nav class="navbar">
+        <span class="navbar-brand" href="#">PANIST</span>
+    </nav>
     <div class="container">
-
-        <div class="blog-header">
-            <h1 class="blog-title">Démonstration d'utilisation des widgets PANIST</h1>
-            <p class="lead blog-description">Cette page Web, réalisée à l'aide de <a href="http://getbootstrap.com/">Bootstrap</a>
-                et
-                <a href="https://angularjs.org/">AngularJS</a> montre comment les <a href="https://github.com/istex/istex-widgets-angular">widgets
-                    Panist</a> peuvent être intégrés à un site Web tier.</p>
-        </div>
-
         <div class="row">
-            <div class="col-sm-11 blog-main">
-                <div class="modal-body">
-                    
-                    <select class="etabList" name="idc" style="width:100%" onchange="getIdcValue(this)" ng-model="idc">
-                        <option></option>
-                    </select>
-                </div>
+            <div class="col-sm-12 blog-main">
                 <istex-auth></istex-auth>
-
+                <istex-select2></istex-select2>
                 <istex-search></istex-search>
             </div>
         </div>
-
         <div class="row">
-
             <div class="col-sm-8 blog-main">
-
                 <div class="blog-post">
-
                     <istex-results></istex-results>
-
                 </div><!-- /.blog-post -->
-
             </div><!-- /.blog-main -->
-
-            <div class="col-sm-3 blog-sidebar">
+            <div class="col-sm-4 blog-sidebar">
                 <div class="sidebar-module sidebar-module-inset">
                     <br />
                     <istex-facets></istex-facets>
@@ -79,38 +63,12 @@
     </script>
 
     <!-- Dependencies -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
+
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.js"></script>
     <script src="slider/rzslider.js"></script>
-    <script src="istexconfigdefault.js"></script>
     <script src="app.min.js"></script>
-    <script>
-        function getIdcValue(selectObject) {
-            localStorage.setItem('idc', selectObject.value);
-        }
-        $(document).ready(function () {
-
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET",
-                "https://panistdepl.github.io/browser-extension/22.11.18_11:28:10_listeInstitutions.json?date=" +
-                Date.now(), true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var data = JSON.parse(xhr.responseText)
-                    $('.etabList').select2({
-                        data: data,
-                        language: "fr",
-                        placeholder: "Sélectionner le nom de votre établissement"
-                    });
-
-                }
-            }
-            xhr.send();
-        });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 </body>
 
 </html>

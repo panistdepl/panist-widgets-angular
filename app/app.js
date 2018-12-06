@@ -17,9 +17,9 @@ for(var i = 0; i < scripts.length; i++){
 
 // If istexConfig.slider = false, it's not loaded
 if(window.istexConfig.slider !== false && isSlider){
-    var app = angular.module('app', ['rzModule']);
+    var app = angular.module('app', ['rzModule','ngSanitize', 'ui.select']);
 }else{
-    var app = angular.module('app', []);
+    var app = angular.module('app', ['ngSanitize', 'ui.select']);
 }
 
 app.config(['$compileProvider', function ($compileProvider) {

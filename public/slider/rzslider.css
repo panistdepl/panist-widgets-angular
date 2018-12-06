@@ -45,10 +45,10 @@ rzslider span.rz-bar {
 rzslider span.rz-bar.rz-selection {
   z-index: 1;
   width: 0;
-  background: #0db9f0;
+  background: #d0d0d0;
   -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 
 rzslider span.rz-pointer {
@@ -57,10 +57,10 @@ rzslider span.rz-pointer {
   width: 32px;
   height: 32px;
   cursor: pointer;
-  background-color: #0db9f0;
+  background-color: #1377b5;
   -webkit-border-radius: 16px;
-     -moz-border-radius: 16px;
-          border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
 }
 
 rzslider span.rz-pointer:after {
