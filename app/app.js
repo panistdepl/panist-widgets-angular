@@ -4,7 +4,7 @@ window.myNav = (window.myNav.indexOf('msie') != -1) ? parseInt(window.myNav.spli
 if (window.myNav && window.myNav <= 8) {
     var scr = document.getElementsByTagName("script");
     var lastSrcipt = scr[scr.length - 1];
-    lastSrcipt.insertAdjacentHTML('afterend', '<div id="old">Votre navigateur ne peut pas afficher les widgets ISTEX, veuillez en utiliser un plus récent : Internet Explorer 9 ou plus, Google Chrome, Firefox,...</div>');
+    lastSrcipt.insertAdjacentHTML('afterend', '<div id="old">Votre navigateur ne peut pas afficher les widgets PANIST, veuillez en utiliser un plus récent : Internet Explorer 9 ou plus, Google Chrome, Firefox,...</div>');
 }
 
 var scripts = document.getElementsByTagName("script");
@@ -15,8 +15,8 @@ for(var i = 0; i < scripts.length; i++){
     }
 };
 
-// If istexConfig.slider = false, it's not loaded
-if(window.istexConfig.slider !== false && isSlider){
+// If panistConfig.slider = false, it's not loaded
+if(window.panistConfig.slider !== false && isSlider){
     var app = angular.module('app', ['rzModule','ngSanitize', 'ui.select']);
 }else{
     var app = angular.module('app', ['ngSanitize', 'ui.select']);
@@ -54,9 +54,9 @@ var extend = function ( objects ) {
 // {{ input | filter:option1:option2:optionN }}
 
 app.filter('proxify', function() {
-    return function(input, istexApi) {
-        if (input!=null && istexApi !== "http://vd-panist-api.intra.inist.fr:63332")
-            input = input.replace("http://vd-panist-api.intra.inist.fr:63332", istexApi);
+    return function(input, panistApi) {
+        if (input!=null && panistApi !== "https://api.panist.fr")
+            input = input.replace("https://api.panist.fr", panistApi);
         return input;
     }
 });
@@ -66,6 +66,7 @@ app.filter('capitalize', function() {
     return function(input, scope) {
         if (input!=null)
             input = input.toLowerCase();
+            if (input != undefined)
         return input.substring(0,1).toUpperCase()+input.substring(1);
     }
 });
@@ -174,15 +175,15 @@ app.filter('languagize', function(){
     };
 });
 
-// add sid=istex-widget in all urls
+// add sid=panist-widget in all urls
 // this parameter is used for usage statistics
 app.filter('sidize', function() {
     return function(input, scope) {
         if (input.indexOf('sid=') !== -1) return input;
         if (input.indexOf('?') !== -1) {
-            input += '&sid=istex-widgets';
+            input += '&sid=panist-widgets';
         } else {
-            input += '?sid=istex-widgets';
+            input += '?sid=panist-widgets';
         }
         return input;
     }

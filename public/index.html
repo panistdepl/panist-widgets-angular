@@ -3,13 +3,13 @@
 
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Istex - Widgets</title>
+    <title>PANIST - Widgets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="basique.css">
-    <link rel="stylesheet" href="slider/rzslider.css">
-    <link rel="stylesheet" href="style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.css">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/basique.css">
+    <link rel="stylesheet" href="src/css/rzslider.css">
+    <link rel="stylesheet" href="src/css/select.css">
+    <link rel="stylesheet" href="src/css/style.min.css">
     <style>
         .navbar {
             background-color: #2d2d2d;
@@ -23,6 +23,13 @@
             font-weight: bold;
             letter-spacing: 3px;
         }
+        footer ul{padding:0}
+		footer ul{padding-top:5px;padding-bottom:5px;text-align: center;}
+		footer li{display:inline-block;list-style-type: none; padding:0 3em;}
+		ul.partners{height:130px;line-height:130px}
+		ul.partners li{display:inline-block;list-style-type: none; padding:0 1.5em;}
+		ul.partners li a{display:block}
+		ul.partners li img{vertical-align:middle}
     </style>
 </head>
 
@@ -30,47 +37,65 @@
     <nav class="navbar">
         <span class="navbar-brand" href="#">PANIST</span>
     </nav>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-12 blog-main">
-                <istex-auth></istex-auth>
-                <istex-select2></istex-select2>
-                <istex-search></istex-search>
+                <div class="blog-header">
+                    <h1 class="blog-title">Démonstration d'utilisation des widgets PANIST</h1>
+                    <p class="lead blog-description">Cette page Web, réalisée à l'aide de <a href="http://getbootstrap.com/">Bootstrap</a>
+                        et
+                        <a href="https://angularjs.org/">AngularJS</a> montre comment les <a href="https://github.com/panistdepl/panist-widgets-angular">widgets
+                            PANIST</a> peuvent être intégrés à un site Web tiers.</p>
+                </div>
+                <panist-auth></panist-auth>
+                <panist-select2></panist-select2>
+                <panist-search></panist-search>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-8 blog-main">
                 <div class="blog-post">
-                    <istex-results></istex-results>
+                    <panist-results></panist-results>
                 </div><!-- /.blog-post -->
             </div><!-- /.blog-main -->
             <div class="col-sm-4 blog-sidebar">
                 <div class="sidebar-module sidebar-module-inset">
                     <br />
-                    <istex-facets></istex-facets>
+                    <panist-facets></panist-facets>
                 </div>
             </div><!-- /.blog-sidebar -->
 
         </div>
+
         <!-- /.row -->
     </div>
+    <footer style="margin-top: 20px;">
+            <p id="version" class="text-center">Dernière version en date : 1.0.0</p>
+            <ul class="partners">
+                <li><a href="http://www.enseignementsup-recherche.gouv.fr/" target="_blank"><img src="https://www.istex.fr/wp-content/themes/istex/images/footer/MESRI_logo.jpg" alt="ministère de l'éducation et de la recherche"></a></li>           	
+                <li><a href="http://www.agence-nationale-recherche.fr/" target="_blank"><img src="https://www.istex.fr/wp-content/themes/istex/images/footer/investissement_avenir.png" alt="Financement : ANR-10-IDEX-0004-02"></a></li>          	
+                <li><a href="http://www.cnrs.fr/" target="_blank"><img src="https://www.istex.fr/wp-content/themes/istex/images/footer/logo-cnrs-simple.svg" height="100" alt="CNRS"></a></li>          	
+                <li><a href="http://www.univ-lorraine.fr/" target="_blank"><img src="http://www.univ-lorraine.fr/sites/www.univ-lorraine.fr/files/logo-universite-de-lorraine.png" alt="Université de Lorraine" width="119px"></a></li>        
+                <li><a href="http://www.abes.fr/" target="_blank"><img src="https://www.istex.fr/wp-content/themes/istex/images/footer/ABES-logo.png" alt="abes, agence bibliographique de l'enseignement supérieur"></a></li>          	
+                <li><a href="http://www.couperin.org/" target="_blank"><img src="https://www.istex.fr/wp-content/themes/istex/images/footer/couperin.png" alt="consortium unifié des établissements universitaires et de recherche pour l'accès aux publications numériques"></a></li>
+                <li><a href="http://www.cpu.fr/" target="_blank"><img src="https://www.istex.fr/wp-content/themes/istex/images/footer/CPU-Logo.png" alt="Conférence des présidents d'université"></a></li>        
+            </ul>
+        </footer>
     <!-- /.container -->
-
     <script>
-        var istexConfig = {
+        var panistConfig = {
             idc: '',
-            showFulltext: 'true',
-            showMetadonnee: 'true'
+            showFulltext: true,
+            showMetadonnee: false
         }
     </script>
-
     <!-- Dependencies -->
-
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.js"></script>
-    <script src="slider/rzslider.js"></script>
-    <script src="app.min.js"></script>
+    <script src="src/js/angular.min.js"></script>
+    <script src="src/js/angular-sanitize.js"></script>
+    <script src="src/js/select.js"></script>
+    <script src="src/js/rzslider.js"></script>
+    <script src="src/js/app.min.js"></script>
 </body>
 
 </html>

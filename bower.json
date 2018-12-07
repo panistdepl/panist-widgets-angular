@@ -1,11 +1,11 @@
 {
-  "name": "istex-widgets-angular",
+  "name": "panist-widgets-angular",
   "version": "0.1.7",
-  "homepage": "https://github.com/istex/istex-widgets-angular",
+  "homepage": "https://github.com/panistdepl/panist-web-search",
   "authors": [
     "Thomas Frantz"
   ],
-  "description": "Widgets istex with AngularJS",
+  "description": "Widgets PANIST with AngularJS",
   "license": "CeCILL",
   "ignore": [
     "**/.*",

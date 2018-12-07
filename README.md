@@ -1,29 +1,29 @@
-# Widgets ISTEX avec AngularJS
+# Widgets PANIST avec AngularJS
 
-Widgets (search, results, facets) permettant de créer rapidement des interface Web d'interrogation des ressources ISTEX avec AngularJS.
+Widgets (search, results, facets) permettant de créer rapidement des interface Web d'interrogation des ressources PANIST avec AngularJS.
 
 ## Exemples
 
 Pour visualiser les différents exemples cliquez sur les liens suivants :
-  - http://istex.github.io/
-  - http://istex.github.io/exemple1
-  - http://istex.github.io/exemple2
-  - http://istex.github.io/exemple3
-  - http://istex.github.io/basique
+  - http://panist.github.io/
+  - http://panist.github.io/exemple1
+  - http://panist.github.io/exemple2
+  - http://panist.github.io/exemple3
+  - http://panist.github.io/basique
 
 ## Usage classique des widgets
 
-Exemple d'utilisation classique des widgets search et results. Il est nécessaire dans un premier temps de charger les fichiers JS et CSS des widgets Istex (à la fin du body pour charger les fichiers après que la page soit affichée) ainsi que la bibliothèque AngularJS qui est une dépendance nécessaire.
+Exemple d'utilisation classique des widgets search et results. Il est nécessaire dans un premier temps de charger les fichiers JS et CSS des widgets Panist (à la fin du body pour charger les fichiers après que la page soit affichée) ainsi que la bibliothèque AngularJS qui est une dépendance nécessaire.
 On peut aussi charger la bibliothèque Bootstrap pour un meilleur rendu et la directive pour afficher le Slider (voir plus bas pour afficher le Slider)
 
 Ensuite vous pouvez placer deux balises (zone de recherche & zone de résultats) où vous le souhaitez dans votre page HTML.
 Ces balises ont des noms spécifiques pour chaque widget :
 ```html
-<istex-search>, <istex-results>, <istex-facets>
+<panist-search>, <panist-results>, <panist-facets>
 ```
 On peut aussi utiliser des balises classiques avec des attributs spéciaux :
 ```html
-<div istex-search></div>
+<div panist-search></div>
 ```
 
 Voici ce que ca peut donner sur une page quasi vierge :
@@ -33,50 +33,50 @@ Voici ce que ca peut donner sur une page quasi vierge :
 <html lang="fr">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Istex - Widgets</title>
+    <title>Panist - Widgets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//widgets.istex.fr/slider/rzslider.css">
-    <link rel="stylesheet" href="//widgets.istex.fr/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//widgets.istex.fr/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="//widgets.istex.fr/styleAngular/style.min.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/slider/rzslider.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/styleAngular/style.min.css">
 </head>
 <body>
 
-<istex-search></istex-search>
-<istex-results></istex-results>
-<istex-facets></istex-facets>
+<panist-search></panist-search>
+<panist-results></panist-results>
+<panist-facets></panist-facets>
 
 <!-- Dependencies -->
 
 <script>
-    var istexConfig = {
-      // placer ici la configuration souhaitée, cf section suivante et le contenu de istexConfigDefault
+    var panistConfig = {
+      // placer ici la configuration souhaitée, cf section suivante et le contenu de panistConfigDefault
     };
 </script>
 
-<script src="//widgets.istex.fr/bower_components/angular/angular.min.js"></script>
-<script src="//widgets.istex.fr/slider/rzslider.js"></script>
-<script src="//widgets.istex.fr/app.min.js"></script>
+<script src="//widgets.panist.fr/bower_components/angular/angular.min.js"></script>
+<script src="//widgets.panist.fr/slider/rzslider.js"></script>
+<script src="//widgets.panist.fr/app.min.js"></script>
 
 </body>
 </html>
 ```
 
 ## Paramètres des widgets
-Les widgets peuvent être paramétrés en positionnant les clés/valeurs de la variable globale istexConfig dans le HTML AVANT le scipt pour app.min.js.
+Les widgets peuvent être paramétrés en positionnant les clés/valeurs de la variable globale panistConfig dans le HTML AVANT le scipt pour app.min.js.
 La liste des différents paramètres se présente comme ceci (et est sujette à modifications) :
 
 ```javascript
-var istexConfigDefault = {
-    // l'adresse de l'API de l'Istex
-    istexApi: 'http://vd-panist-api.intra.inist.fr:63332',
+var panistConfigDefault = {
+    // l'adresse de l'API de l'Panist
+    panistApi: 'http://vd-panist-api.intra.inist.fr:63332',
     // on peut avoir besoin de proxyfier les liens vers les plein-textes ou les méta-données
     // pour une ezproxyfication, réglez ici proxyApi à l'adresse ezproxyfiée
-    // ex à l'UL: https://api-istex-fr.bases-doc.univ-lorraine.fr
-    //proxyApi: 'https://api.istex.fr',
+    // ex à l'UL: https://api-panist-fr.bases-doc.univ-lorraine.fr
+    //proxyApi: 'https://api.panist.fr',
 
     // pour lancer une recherche au chargement de la page
-    // indiquer les mots à rechercher (argument de ?q= au niveau de l'api istex)
+    // indiquer les mots à rechercher (argument de ?q= au niveau de l'api panist)
     // si vous ne voulez pas de recherche au démarrage, ne mettez rien (ou query: false)
     // si vous mettez query: "", les résultats seront tous les documents
     query: false,
@@ -226,26 +226,26 @@ var istexConfigDefault = {
 ```
 
 Remarque : ces paramètres doivent être de préférence positionnés avant l'inclusion des fichiers app.min.js.
-Remarque 2 : la recherche des documents est libre, ainsi que l'accès aux méta-données mais l'accès au plein texte est restreint et nécessite la configuration de proxyApi. Pour plus de détails, vous pouvez [nous contacter](mailto:istex-contact@univ-lorraine.fr).
+Remarque 2 : la recherche des documents est libre, ainsi que l'accès aux méta-données mais l'accès au plein texte est restreint et nécessite la configuration de proxyApi. Pour plus de détails, vous pouvez [nous contacter](mailto:panist-contact@univ-lorraine.fr).
 
-## Fonctionnement du widget istexSearch
+## Fonctionnement du widget panistSearch
 
-Ce widget permet d'insérer dans la page HTML une zone de saisie ainsi qu'un bouton de recherche. Lorsqu'une suite de mots sont tapés puis que le bouton rechercher est pressé, l'API Istex est interrogée à travers des requêtes AJAX.
+Ce widget permet d'insérer dans la page HTML une zone de saisie ainsi qu'un bouton de recherche. Lorsqu'une suite de mots sont tapés puis que le bouton rechercher est pressé, l'API Panist est interrogée à travers des requêtes AJAX.
 Une fois les résultats reçus, ils sont enregistrés dans le $rootScope et ainsi propagés aux widgets results et facets.
 Ce widget permet aussi de faire une recherche avancée.
 
-## Fonctionnement du widget istexResults
+## Fonctionnement du widget panistResults
 
-Ce widget permet d'insérer dans la page HTML la liste des résultats issus d'une recherche. Il a donc besoin du widget istexSearch pour fonctionner (Il est évident qu'on ne peut pas afficher des données si on ne les a pas réccupérées de l'API avant ! ).
+Ce widget permet d'insérer dans la page HTML la liste des résultats issus d'une recherche. Il a donc besoin du widget panistSearch pour fonctionner (Il est évident qu'on ne peut pas afficher des données si on ne les a pas réccupérées de l'API avant ! ).
 Il permet aussi de gérer le système de pagination et la recherche au chargement de la page.
 
-## Fonctionnement du widget istexFacets
+## Fonctionnement du widget panistFacets
 
 Ce widget permet d'insérer dans la page HTML des facettes permettant d'affiner la recherche courante de l'utilisateur. A l'aide de la facette corpus, on peut ainsi n'afficher que les résultats provenant d'un éditeur précis.
 Les facettes actuellement gérées sont les suivantes :
 - corpusName, publicationDate, copyrightDate, language, score
 
-Il est possible de n'afficher que certaines facettes en modifiant le paramètre ``facetsToLoad`` dans istexConfig.
+Il est possible de n'afficher que certaines facettes en modifiant le paramètre ``facetsToLoad`` dans panistConfig.
 
 ## Documentation développeurs
 
@@ -268,22 +268,22 @@ Sous windows, télécharger et installer nodejs et git depuis leurs sites :
 - http://nodejs.org/download/
 - http://git-scm.com/download/win
 
-Récupérer le dépôt git des widgets Istex (au choix via SSH ou via HTTPS) :
+Récupérer le dépôt git des widgets Panist (au choix via SSH ou via HTTPS) :
 ```
-git clone git@github.com:istex/istex-widgets-angular.git
-git clone https://github.com/istex/istex-widgets-angular.git
+git clone git@github.com:panist/panist-widgets-angular.git
+git clone https://github.com/panist/panist-widgets-angular.git
 ```
 
 package.json permet d'associer des scripts à npm et faciliter ainsi la construction du projet.
 Pour initialiser les dépendances (uglify-js, clean-css, http-server, bootstrap et angularjs) en local et rendre le projet prêt à utiliser, il suffit de faire :
 ```
-cd istex-widgets-angular/
+cd panist-widgets-angular/
 npm install
 ```
 
 Si vous avez déjà des outils pour minifier le js et le css et lancer un serveur en locale, vous pouvez juste charger angularjs et bootstrap :
 ```
-cd istex-widgets-angular/
+cd panist-widgets-angular/
 bower install
 ```
 
@@ -300,12 +300,12 @@ Puis ouvrez les URL qui s'affichent dans votre fenêtre. Exemple: http://127.0.0
 
 Si vous modifiez des fichiers, vous devez minifier le Javascript à l'aide d'Uglify-JS et/ou le CSS avec Clean-CSS :
 ```
-cd istex-widgets-angular/
+cd panist-widgets-angular/
 npm run js // Compile juste le js dans app.min.js
 npm run css // Compile juste le css dans style.min.css
 npm run jscss // Compile le js et le css dans leur fichiers réspectifs
 ```
-ATTENTION : Si vous utilisez vos propres minifieurs, il faut toujours mettre istexconfigdefault.js à la fin de la liste des fichiers à minifier de votre commande car il lie l'application à AngularJS
+ATTENTION : Si vous utilisez vos propres minifieurs, il faut toujours mettre panistconfigdefault.js à la fin de la liste des fichiers à minifier de votre commande car il lie l'application à AngularJS
 
 ### Comprendre la structure du code
 
@@ -315,7 +315,7 @@ L'utilisation d'AngularJS mène à avoir une structure du code particulière (ap
   - Dans chaque dossier widget, un fichier controller qui inclue le code qui permet d'associer les données au $rootScope (Controller)
   - Dans chaque dossier widget, un fichier directive qui inclue le code qui permet de générer le HTML (View)
   - Dans chaque dossier widget, un fichier service qui inclue le code qui permet de construire les URIs et de faire l'appel correspondant (Model)
-  - Un fichier istexconfigdefault.js qui associe les configurations par défaut au $rootScope (et éventuellement celles indiquées dans le HTML) et associe l'application à AngularJS
+  - Un fichier panistconfigdefault.js qui associe les configurations par défaut au $rootScope (et éventuellement celles indiquées dans le HTML) et associe l'application à AngularJS
 - Un dossier css qui contient tout le css lié aux widgets
 
 On a aussi :
@@ -336,7 +336,7 @@ On charge les scripts de manière asynchrone en remplaçant les balises par une 
 ```html
 <!-- Dependencies -->
 <script>
-    var istexConfig = {
+    var panistConfig = {
     };
     [
     	'bower_components/angular/angular.min.js',
@@ -354,30 +354,30 @@ On charge les scripts de manière asynchrone en remplaçant les balises par une 
 
 Au final, l'utilisateur pourra accéder aux différentes versions des widgets sur de cette façon :
 - Pour utiliser la dernière version stable des widgets, les fichiers sont présents ici :
-  - http://istex.github.io/bower_components/angular/angular.min.js
-  - http://istex.github.io/bower_components/bootstrap/dist/css/bootstrap.min.css
-  - http://istex.github.io/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
-  - http://istex.github.io/styleAngular/style.min.css
-  - http://istex.github.io/app.min.js
-  - http://istex.github.io/slider/rzslider.css
-  - http://istex.github.io/slider/rzslider.js
+  - http://panist.github.io/bower_components/angular/angular.min.js
+  - http://panist.github.io/bower_components/bootstrap/dist/css/bootstrap.min.css
+  - http://panist.github.io/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
+  - http://panist.github.io/styleAngular/style.min.css
+  - http://panist.github.io/app.min.js
+  - http://panist.github.io/slider/rzslider.css
+  - http://panist.github.io/slider/rzslider.js
 - Pour utiliser la version 1.3.3 des widgets, les fichiers sont présents ici :
-  - http://istex.github.io/v1.3.3/bower_components/angular/angular.min.js
-  - http://istex.github.io/v1.3.3/bower_components/bootstrap/dist/css/bootstrap.min.css
-  - http://istex.github.io/v1.3.3/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
-  - http://istex.github.io/v1.3.3/styleAngular/style.min.css
-  - http://istex.github.io/v1.3.3/app.min.js
-  - http://istex.github.io/v1.3.3/slider/rzslider.css
-  - http://istex.github.io/v1.3.3/slider/rzslider.js
+  - http://panist.github.io/v1.3.3/bower_components/angular/angular.min.js
+  - http://panist.github.io/v1.3.3/bower_components/bootstrap/dist/css/bootstrap.min.css
+  - http://panist.github.io/v1.3.3/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
+  - http://panist.github.io/v1.3.3/styleAngular/style.min.css
+  - http://panist.github.io/v1.3.3/app.min.js
+  - http://panist.github.io/v1.3.3/slider/rzslider.css
+  - http://panist.github.io/v1.3.3/slider/rzslider.js
 
 ### Modification apportée à la version Panist du widget
 
 Panist est un outil qui assure la gestion différenciée des droits. 
-Pour appliquer cette règle il faut mentionner dans la variable istexConfig au niveau de la page index.html, le trigramme de l'établissement 
+Pour appliquer cette règle il faut mentionner dans la variable panistConfig au niveau de la page index.html, le trigramme de l'établissement 
 Voici un exemple ;
 ```html
 <script>
-    var istexConfig = {
+    var panistConfig = {
         idc:"mettre ici le trigramme"
     };
 </script>

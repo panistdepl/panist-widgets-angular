@@ -1,0 +1,97 @@
+/* Barre de recherche */
+#panist-widget-search .panist-search-form span input.panist-search-input {
+	padding: 0.2em 0.4em;
+	width: 40%;
+}
+#panist-widget-search .panist-search-form span {
+	overflow: visible;
+	text-align: center;
+}
+#panist-widget-search .panist-search-form input.panist-search-submit {
+	width: 15%;
+	margin-right: 38%;
+	margin-top: 10px;
+	padding: 0.2em 0.4em;
+	color: #337ab7;
+}
+#panist-widget-search .panist-search-form input.panist-search-submit:hover {
+	background-color: #337ab7;
+	color: white;
+} 
+#panist-widget-search .panist-advanced-wrapper{
+	width: 100%;
+}
+#panist-widget-search .panist-advanced-wrapper .panist-advanced-button{
+	margin-left: 28%;
+	margin-top: 10px;
+	width: 15%;
+	text-align: center;
+	padding: 0.2em 0.4em;
+	color: #337ab7;
+	border: 1px double #A5B8D3;
+	border-radius: 0.6em;
+	font-size: 14px;
+	color: #337ab7;
+	font-weight: bold;
+	cursor: pointer;
+}
+#panist-widget-search .panist-advanced-wrapper .panist-advanced-button a{
+	color: #337ab7;
+	text-decoration: none;
+	font-weight: bold;
+}
+#panist-widget-search .panist-advanced-wrapper .panist-advanced-button:hover{
+	background-color: #337ab7;
+}
+#panist-widget-search .panist-advanced-wrapper .panist-advanced-button:hover a{
+	color: #FFF;
+}
+#panist-widget-search .panist-advanced-wrapper .panist-advanced{
+	width: 20%;
+	text-align: center;
+	margin-top: 1%;
+}
+#panist-widget-search .panist-search-form div.panist-search-loading{
+	margin-top: -20px;
+	margin-right: 4px;
+	margin-left: 65%;
+}
+
+/* Liens */
+.panist-results-pagination ul li .panist-results-pagination-page-selected{
+	color: #65635C;
+}
+
+/* Textes */
+#panist-widget-results .panist-results-items li.panist-results-item, #panist-widget-facets .panist-facets .panist-facet li, ol.panist-results-items li.panist-results-item p.panist-results-item-abstract{
+	color: #65635C;
+}
+ol.panist-results-items panist-results-item b{
+}
+
+/* Resultats */
+#panist-widget-results {
+	width: 70%;
+	float: right;
+	margin-top: 20px;
+	margin-right: 2%;
+}
+
+/* Facettes */
+#panist-widget-facets {
+	width: 25%;
+	float: left;
+	margin-top: 20px;
+}
+
+/* Titre du bloc facette */
+#panist-widget-facets .panist-facets h3.panist-facets-title{
+	background-image: none;
+	color: #65635C;
+	font-size: 1.5em;
+}
+
+/* Slider */
+rzslider span.rz-bar.rz-selection, rzslider span.rz-pointer{
+	background-color: #337ab7;
+}

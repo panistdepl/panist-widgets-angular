@@ -1,0 +1,40 @@
+.panist-advanced-wrapper .panist-advanced{
+    display: inline-block;
+    padding-right: 10px;
+}
+.panist-advanced-wrapper .panist-advanced .panist-advanced-name{
+    margin-bottom: 5px !important;
+    font-weight: bold;
+}
+
+.panist-advanced-name {
+    margin-bottom: 5px !important;
+}
+.panist-results-pagination ul{
+    padding: 0;
+}
+.panist-results-pagination ul li, .panist-results-pagination ul, div.panist-results-pagination .panist-results-pagination-prec, div.panist-results-pagination .panist-results-pagination-prec{
+    display: inline-block;
+}
+
+.panist-results-item .star-rating{
+    display: inline-block;
+}
+
+.panist-results-item .panist-results-item-download .panist-results-item-dl{
+    display: inline-block;
+    padding-right: 10px;
+}
+#panist-widget-facets .panist-facets .panist-facet{
+    padding-bottom: 10px;
+}
+#panist-widget-facets .panist-facets .panist-facet .panist-facet-name{
+    margin: 5px;
+    cursor: pointer;
+}
+#panist-widget-facets .panist-facets .panist-facet li{
+    list-style-type: none;
+}
+#panist-widget-facets .panist-facets .panist-facet li span{
+    padding-left: 10px;
+}

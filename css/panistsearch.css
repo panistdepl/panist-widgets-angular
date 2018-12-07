@@ -1,0 +1,127 @@
+.panist-search-form {
+  padding: 0;
+  margin: 0;
+}
+.panist-search-form span {
+  display: inline-block;
+  width:90%;
+  overflow: hidden;
+  padding: 0 0px;
+}
+.panist-search-form span input.panist-search-input {
+  vertical-align: top;
+  width: 100%;
+  background-image: url(./img/logo-panist.png);
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+  background-position: right;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*background-image: url(../public/src/css/img/panistsearch-search-logo.png);*/
+.panist-search-form input.panist-search-submit {
+  float: right;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  margin-left: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.panist-search-form p.panist-search-error {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  color: #DD4B39;
+  font-size: medium;
+  display: none;
+}
+.panist-search-form div.panist-search-loading {
+  background-image: url(../public/src/css/img/panistLoader.gif);
+  background-repeat: no-repeat;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+.panist-ezproxy-auth-btn {
+  position: relative;
+  padding: 8px;
+}
+.panist-ezproxy-auth-btn div {
+  background-image: url(../public/src/css/img/panistsearch-search-logo.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 26px;
+  height: 6px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.panist-advanced-wrapper {
+  width: 90%;
+}
+
+.panist-advanced-wrapper .panist-advanced {
+  display: inline-block;
+  width: 25%;
+}
+.panist-advanced-wrapper .panist-advanced-button{
+  display: inline-block;
+}
+.panist-search-advanced-input
+{
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.panist-search-input
+{
+    width:100%;
+    display: block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.adding-logo-to-input
+{
+  vertical-align: top;
+  background-image: url(../public/src/css/img/logo-panist.png);
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+  background-position: right;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

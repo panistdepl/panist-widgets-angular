@@ -1,0 +1,79 @@
+.panist-facets .panist-facets-title {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.panist-facets .panist-facet {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  clear: both;
+}
+.panist-facets .panist-facet .panist-facet-name {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #AAA;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.panist-facets .panist-facet .panist-facet-checkbox{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.panist-facets .panist-facet .panist-facet-checkbox label{
+  display: block;
+}
+#panist-widget-facets .panist-facets .panist-facet .panist-facet-checkbox.wos label {
+  font-size: 75%;
+}
+#panist-widget-facets .panist-facets .panist-facet .panist-facet-checkbox.inist label {
+  font-size: 75%;
+}
+#panist-widget-facets .panist-facets .panist-facet .panist-facet-checkbox.scopus label {
+  font-size: 75%;
+}
+#panist-widget-facets .panist-facets .panist-facet .panist-facet-checkbox.scienceMetrix label {
+  font-size: 75%;
+}
+
+.panist-facets .panist-facet .panist-facet-checkbox input{
+  margin-right: 8px;
+}
+.panist-facets .panist-facet .panist-facet-checkbox .panist-facet-checkbox-badge{
+  float: right;
+  display: inline-block;
+  min-width: 10px;
+  padding: 0 4px 0 4px;
+  margin-top: 0;
+  font-size: small;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #337ab7;
+  border-radius: 4px;
+}
+.panist-facets .panist-facet .rzslider span.rz-pointer {
+  top: -8px;
+  width: 20px;
+  height: 20px;
+}
+.panist-facets .panist-facet .rzslider span.rz-pointer:after {
+  top: 6px;
+  left: 6px;
+}
+.panist-facets .panist-facet .icon.arrow {
+  background: url("../public/src/css/img/arrow-d.png") no-repeat scroll 0 0 transparent;
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  vertical-align: bottom;
+}
+.panist-facets .panist-facet .icon.arrow.flipped {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}

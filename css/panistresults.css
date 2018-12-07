@@ -1,0 +1,240 @@
+#panist-widget-results div.panist-results-items-stats {
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  color: #808080;
+}
+#panist-widget-results div.panist-results-sort{
+  display: inline-block;
+  float: right;
+}
+#panist-widget-results ol.panist-results-items {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item {
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item a.panist-results-item-title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item p.panist-results-item-abstract {
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  font-size: smaller;
+  font-weight: lighter;
+  text-decoration: none;
+  text-align: justify;
+  color: #000;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item div.panist-tag {
+  padding: 2px;
+  margin: 0;
+  margin-right: 8px;
+  margin-top: 8px;
+  font-size: smaller;
+  vertical-align: middle;
+  font-family: monospace;
+  float: right;
+  background-color: #e8e8e8;
+  color: #5d5d5d;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl {
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+  list-style-type: none;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item div.downloads {
+  display: block;
+  clear: both;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item div.download {
+  display: inline-block; 
+  margin-right: 30px;
+  width: 20%;
+}
+
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a {
+  padding: 2px;
+  margin: 0;
+  margin-right: 2px;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-image: url(../public/src/css/img/panistresults-item-dl-file.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-pdf {
+  background-image: url(../public/src/css/img/panistresults-item-dl-pdf.png);
+ 
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-mods {
+  background-image: url(../public/src/css/img/panistresults-item-dl-mods.png);
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-xml {
+  background-image: url(../public/src/css/img/panistresults-item-dl-xml.png);
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-txt {
+  background-image: url(../public/src/css/img/panistresults-item-dl-txt.png);
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-tei {
+  background-image: url(../public/src/css/img/panistresults-item-dl-tei.png);
+
+
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-zip {
+  background-image: url(../public/src/css/img/panistresults-item-dl-zip.png);
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item ul.panist-results-item-download li.panist-results-item-dl a.panist-results-item-dl-json {
+  background-image: url(../public/src/css/img/panistresults-item-dl-json.png);
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item div.panist-results-item-bottom {
+  clear: both;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item .star-rating {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 130px;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item .full-star {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 50%;
+  background-image: url('../public/src/css/img/full-stars.png');
+  background-repeat: no-repeat;
+  background-size: 130px;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item .empty-star {
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/src/css/img/star.png');
+  background-repeat: no-repeat;
+  background-size: 130px;
+}
+#panist-widget-results .panist-results-pagination {
+  margin: auto;
+  text-align: left;
+  line-height: 30px;
+}
+#panist-widget-results .panist-results-pagination button {
+  border: medium none;
+  color: transparent;
+  height: 15px;
+  vertical-align: middle;
+  width: 15px;
+  cursor: pointer;
+}
+#panist-widget-results .panist-results-pagination button.panist-results-pagination-prec {
+  background: url("../public/src/css/img/panistresults-pagination-btn.png") no-repeat scroll 0 0 transparent;
+  margin-right: 10px;
+}
+#panist-widget-results .panist-results-pagination button.panist-results-pagination-next {
+  background: url("../public/src/css/img/panistresults-pagination-btn.png") no-repeat scroll 0 0 transparent;
+  transform: rotate(180deg);
+  margin-left: 10px;
+}
+#panist-widget-results .panist-results-pagination ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: inline-block;
+  color: #9c9d9f;
+}
+#panist-widget-results .panist-results-pagination ul li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 25px;
+  display: inline-block;
+}
+#panist-widget-results .panist-results-pagination ul li a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#panist-widget-results .panist-results-pagination ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#panist-widget-results .panist-results-pagination ul li.panist-results-pagination-page-selected {
+  font-weight: bold;
+}
+#panist-widget-results .panist-results-pagination ul li.panist-results-pagination-page-selected a {
+  color: black;
+  cursor: default;
+}
+#panist-widget-results .panist-results-pagination ul li.panist-results-pagination-page-selected a:hover {
+  text-decoration: none;
+  cursor: default;
+}
+#panist-widget-results p.panist-results-error {
+  margin: 5px 0 0 0;
+  padding: 0;
+  color: #DD4B39;
+}
+#panist-widget-results p.panist-results-error span.panist-results-error-msg {
+  font-size: medium;
+}
+#panist-widget-results p.panist-results-error span.panist-results-error-raw {
+  font-size: small;
+  font-style: italic;
+}
+#panist-widget-results div.panist-hidebutton{
+  width: 250px;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #949494;
+  cursor: pointer;
+  background-color: white;
+  background-image: url(../public/src/css/img/panistsearch-search-logo.png);
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position-y: center;
+  text-align: end;
+  color: grey;
+}
+#panist-widget-results ol.panist-results-items li.panist-results-item div.panist-results-item-corpusdiv.panist-hidebutton:active{
+  background-color: #DBDBDB;
+}
+.download h4
+{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  color: grey;
+}
