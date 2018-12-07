@@ -1,5 +1,6 @@
 app.controller('IstexresultsCtrl', ['$scope', '$rootScope', 'istexResultsService', function ($scope, $rootScope, istexResultsService) {
-
+    $rootScope.showFulltext = JSON.parse($rootScope.istexConfigDefault.showFulltext);
+    $rootScope.showMetadonnee = JSON.parse($rootScope.istexConfigDefault.showMetadonnee);
     $rootScope.showResults = false;
 
     $rootScope.defaultSort = $rootScope.istexConfigDefault.defaultSort;
