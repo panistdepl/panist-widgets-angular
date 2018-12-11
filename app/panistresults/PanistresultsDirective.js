@@ -51,7 +51,6 @@ app.directive('panistResults', function () {
             '<div class="download fulltext" ng-show="showFulltext">' +
             '<h4>{{ panistConfigDefault.labels.results["fulltext"] || "Fulltext" }}</h4>' +
             '<ul class="panist-results-item-download">' +
-            //ng-repeat="fulltext in document.fulltext"
             '<li class="panist-results-item-dl fulltext" >' +
             '<a ng-show="showPDF" ng-href="{{ document.fulltext[0].uri | sidize | proxify:panistConfigDefault.proxyApi }}" class="panist-results-item-dl-{{ document.fulltext[0].extension }}" title="Télécharger le fichier {{ document.fulltext[0].extension | uppercase }}" target="_blank">{{ document.fulltext[0].extension | uppercase }}</a>' +
             '<a ng-show="showZIP" ng-href="{{ document.fulltext[1].uri | sidize | proxify:panistConfigDefault.proxyApi }}" class="panist-results-item-dl-{{ document.fulltext[1].extension }}" title="Télécharger le fichier {{ document.fulltext[1].extension | uppercase }}" target="_blank">{{ document.fulltext[1].extension | uppercase }}</a>' +
@@ -62,7 +61,6 @@ app.directive('panistResults', function () {
             '<h4>{{ (panistConfigDefault.labels.results["metadata"] || "Metadata") }}</h4>' +
             '<ul class="panist-results-item-download metadata">' +
             '<li class="panist-results-item-dl" >' +
-            //ng-repeat="metadata in document.metadata"
             '<a ng-show="showXML" ng-href="{{ document.metadata[0].uri | sidize | proxify:panistConfigDefault.proxyApi }}" class="panist-results-item-dl-{{ document.metadata[0].extension }}" title="Télécharger le fichier {{ document.metadata[0].extension | uppercase }}" target="_blank">{{ document.metadata[0].extension | uppercase }}</a>' +
             '<a ng-show="showMODS" ng-href="{{ document.metadata[1].uri | sidize | proxify:panistConfigDefault.proxyApi }}" class="panist-results-item-dl-{{ document.metadata[1].extension }}" title="Télécharger le fichier {{ document.metadata[1].extension | uppercase }}" target="_blank">{{ document.metadata[1].extension | uppercase }}</a>' +
             '<a ng-show="showJSON" ng-href="{{ document.metadata[2].uri | sidize | proxify:panistConfigDefault.proxyApi }}" class="panist-results-item-dl-{{ document.metadata[2].extension }}" title="Télécharger le fichier {{ document.metadata[2].extension | uppercase }}" target="_blank">{{ document.metadata[2].extension | uppercase }}</a>' +

@@ -2,7 +2,7 @@ app.directive('panistSearch', function () {
     return {
         template: '' +
             '<div id="panist-widget-search" ng-controller="PanistsearchCtrl" >' +
-            '<form>' +
+            '<form class="panist-search-form">' +
                 '<div class="input-group">'+
                     '<input class="form-control adding-logo-to-input" type="search" value="" placeholder="{{panistConfigDefault.labels.search.placeholder.main || \'Votre requête ici ...\'}}" ng-model="query" ng-focus="panistConfigDefault.focusInputQueryOnLoad">'+
                     '<span class="input-group-btn">'+
