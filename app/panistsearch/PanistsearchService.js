@@ -4,9 +4,8 @@ app.factory('panistSearchService', ['$http', '$rootScope', function ($http, $roo
             var idc;
             // We create the url to call
             var url = $rootScope.panistConfigDefault.panistApi; //vd panist
-            //var idc = $rootScope.panistConfigDefault.idc; //On réscupére le trigramme couperin
-            //var idc = localStorage.getItem("idc"); //On réscupére le trigramme couperin
-            var selectedObj = localStorage.getItem("idc"); //On réscupére le trigramme couperin
+        
+            var selectedObj = localStorage.getItem("idc"); //On récupére le trigramme couperin sélectionné de la liste des établissements
             if (selectedObj != undefined) {
                 try {
                     idc = JSON.parse(localStorage.getItem("idc")).value.id;
@@ -16,9 +15,9 @@ app.factory('panistSearchService', ['$http', '$rootScope', function ($http, $roo
                     return false;
                 }
             }
-            var idcFromConfigFile = $rootScope.panistConfigDefault.idc; //On réscupére le trigramme couperin
-            if (idc == null || idc == undefined) {
-                idc = idcFromConfigFile;
+            var idcFromConfigFile = $rootScope.panistConfigDefault.idc; //On récupére le trigramme couperin de configuration panist
+            if (idc == null || idc == undefined) { 
+                idc = idcFromConfigFile; 
             }
             if (idc != undefined && idc != null  && idc.trim() != '') {         
             url += "/document/?q=";

@@ -370,9 +370,15 @@ Au final, l'utilisateur pourra accéder aux différentes versions des widgets su
   - http://panist.github.io/v1.3.3/slider/rzslider.css
   - http://panist.github.io/v1.3.3/slider/rzslider.js
 
-### Modification apportée à la version Panist du widget
+# Modifications apportées à la version Panist du widget
+
+## Choix de l'établissement 
 
 Panist est un outil qui assure la gestion différenciée des droits. 
+Le choix de l'établissement si fait par deux méthode : 
+
+### Variable de configuration 
+
 Pour appliquer cette règle il faut mentionner dans la variable panistConfig au niveau de la page index.html, le trigramme de l'établissement 
 Voici un exemple ;
 ```html
@@ -382,6 +388,42 @@ Voici un exemple ;
     };
 </script>
 ```
-NB : Si on ne mentionne pas le trigramme de l'établissement, le systéme n'affiche pas de résultat. 
+
+La liste des trigrammes est disponible dans le PDF sous le lien ci-dessous 
+
+### Widget panist-select2 
+
+Ce widget permet d'insérer dans la page HTML une liste déroulante contenant la liste des établissements.
+Un fois un établissement est choisi parmi cette liste, le widget panist prend en considération cette sélection et ignore la variable mentionnée dans  panistConfig.
+
+
+NB : Si on ne mentionne pas le trigramme de l'établissement et on ne fait le choix dans la liste déroulante , le systéme n'affiche pas de résultat.
+
+
+## Paramétrage de l'affichage des liens vers les documents ( PDF, ZIP, MODS, ...)
+
+Le paramétrage par rapport à l'affichage des icônes liens vers les documents se fait dans la page index.html et dans la variable panistConfig. 
+Voici un exemple : 
+```html
+<script>
+    var panistConfig = {
+            showFulltext: true,
+            showPDF     : true,
+            showZIP     : true,
+            
+            showMetadonnee: true,
+            showXML: true,
+            showMODS: true,
+            showJSON: true
+    };
+</script>
+```
+
+Chaque Variable est relatif à une icône (ex : showPDf : un lien vers le document PDF | showXML : un lien vers le document PDF)
+Si on souhaite afficher le lien on met la valeur "true" sinon on met la valeur false de type booléen 
+
+Les deux variable showFulltext et showMetadonnee correspant respectivement au liens de type "Full text" et "Meta donnée", une fois une valeur se mette à false toute la partie concernée ne s'affichera pas.
+
+ 
 
 
