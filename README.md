@@ -2,10 +2,13 @@
 
 Widgets (search, results, facets) permettant de créer rapidement des interface Web d'interrogation des ressources PANIST avec AngularJS.
 
-## Exemples
+## Exemple
 
 Pour visualiser un exemple de disposition du widget cliquez sur le lien suivant :
   https://widgets.panist.fr
+
+## Correspondances entre l'identifiant idc et le libellé des institutions
+  https://widgets.panist.fr/pdf/IdCouperin_NomInstitutions.pdf
 
 ## Usage classique des widgets
 
