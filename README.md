@@ -4,12 +4,8 @@ Widgets (search, results, facets) permettant de créer rapidement des interface 
 
 ## Exemples
 
-Pour visualiser différents exemples de dosposition du widget cliquez sur les liens suivants :
-  - http://istex.github.io/
-  - http://istex.github.io/exemple1
-  - http://istex.github.io/exemple2
-  - http://istex.github.io/exemple3
-  - http://istex.github.io/basique
+Pour visualiser un exemple de disposition du widget cliquez sur le lien suivant :
+  https://widgets.panist.fr
 
 ## Usage classique des widgets
 
