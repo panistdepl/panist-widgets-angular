@@ -4,12 +4,12 @@ Widgets (search, results, facets) permettant de créer rapidement des interface 
 
 ## Exemples
 
-Pour visualiser les différents exemples cliquez sur les liens suivants :
-  - http://panist.github.io/
-  - http://panist.github.io/exemple1
-  - http://panist.github.io/exemple2
-  - http://panist.github.io/exemple3
-  - http://panist.github.io/basique
+Pour visualiser différents exemples de dosposition du widget cliquez sur les liens suivants :
+  - http://istex.github.io/
+  - http://istex.github.io/exemple1
+  - http://istex.github.io/exemple2
+  - http://istex.github.io/exemple3
+  - http://istex.github.io/basique
 
 ## Usage classique des widgets
 
@@ -52,7 +52,7 @@ Voici ce que ca peut donner sur une page quasi vierge :
   <script>
     var panistConfig = {
       // placer ici la configuration souhaitée, cf section suivante et le contenu de panistConfigDefault
-      //Mentionnez ici le trigramme de votre établissement
+      //Mentionnez ici le trigramme de votre établissement. ex: cnr pour CNRS
       idc: 'cnr',
       //Mettez "true" pour afficher les liens vers les fichiers Full text sinon mettez false
       showFulltext: true,
@@ -329,19 +329,14 @@ L'utilisation d'AngularJS mène à avoir une structure du code particulière (ap
   - Dans chaque dossier widget, un fichier directive qui inclue le code qui permet de générer le HTML (View)
   - Dans chaque dossier widget, un fichier service qui inclue le code qui permet de construire les URIs et de faire l'appel correspondant (Model)
   - Un fichier panistconfigdefault.js qui associe les configurations par défaut au $rootScope (et éventuellement celles indiquées dans le HTML) et associe l'application à AngularJS
-- Un dossier css qui contient tout le css lié aux widgets
+- Un dossier bower_components contenant AngularJS et Bootstrap
 
 On a aussi :
 - Un dossier public qui contient tout ce qui est prêt à être utilisés par le serveur
-  - Un dossier bower_components contenant AngularJS et Bootstrap
-  - Les versions minifiés du css et du javascript des widgets
+  - Un dossier src/js et src/css avec les versions minifiés du css et du javascript des widgets
   - Un fichier index.html qui utilise les widgets avec le css, Bootstrap et les Sliders
-  - Un fichier basique.html qui utilise juste les widgets et rien d'autre
-  - Un fichier example1.html qui intervertit l'affichage des résultats et des facettes
-  - Un fichier example2.html qui utilise juste le widget résultat et la recherche au chargement de la page
-  - Un dossier img qui contient toutes les images liées aux widgets
-  - Un dossier slider contenant le code nécessaire à la création et géstion de la directive rzslider (pour les facettes pubdate et copyrightdate par example) indépendant de jQuery, créé par rzajac :
-    [angularjs-slider](https://github.com/rzajac/angularjs-slider)
+  - Un dossier css/img qui contient toutes les images liées aux widgets
+  - Un dossier pdf avec les correspondances entre l'identifiant idc et le libellé des institutions
 
 ### Charger le code de l'application différemment (optionnel)
 Voici un exemple plus poussé pour charger les widgets qui se trouve dans index.html, dans le but d'attendre que la page soit complètement affichée avant de télécharger et exécuter le Javascript :
@@ -364,24 +359,6 @@ On charge les scripts de manière asynchrone en remplaçant les balises par une 
 <!-- <script src="bower_components/angular/angular.min.js"></script> -->
 <!-- <script src="app.min.js"></script> -->
 ```
-
-Au final, l'utilisateur pourra accéder aux différentes versions des widgets sur de cette façon :
-- Pour utiliser la dernière version stable des widgets, les fichiers sont présents ici :
-  - http://panist.github.io/bower_components/angular/angular.min.js
-  - http://panist.github.io/bower_components/bootstrap/dist/css/bootstrap.min.css
-  - http://panist.github.io/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
-  - http://panist.github.io/styleAngular/style.min.css
-  - http://panist.github.io/app.min.js
-  - http://panist.github.io/slider/rzslider.css
-  - http://panist.github.io/slider/rzslider.js
-- Pour utiliser la version 1.3.3 des widgets, les fichiers sont présents ici :
-  - http://panist.github.io/v1.3.3/bower_components/angular/angular.min.js
-  - http://panist.github.io/v1.3.3/bower_components/bootstrap/dist/css/bootstrap.min.css
-  - http://panist.github.io/v1.3.3/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
-  - http://panist.github.io/v1.3.3/styleAngular/style.min.css
-  - http://panist.github.io/v1.3.3/app.min.js
-  - http://panist.github.io/v1.3.3/slider/rzslider.css
-  - http://panist.github.io/v1.3.3/slider/rzslider.js
 
 # Modifications apportées à la version Panist du widget
 
