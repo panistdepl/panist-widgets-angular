@@ -31,32 +31,45 @@ Voici ce que ca peut donner sur une page quasi vierge :
 ```html
 <!DOCTYPE html>
 <html lang="fr">
-<head lang="en">
+  <head lang="en">
     <meta charset="UTF-8">
     <title>Panist - Widgets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//widgets.panist.fr/slider/rzslider.css">
-    <link rel="stylesheet" href="//widgets.panist.fr/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//widgets.panist.fr/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="//widgets.panist.fr/styleAngular/style.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="//widgets.panist.fr/src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/src/css/basique.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/src/css/rzslider.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/src/css/select.css">
+    <link rel="stylesheet" href="//widgets.panist.fr/src/css/style.min.css">
+  </head>
+  <body>
 
-<panist-search></panist-search>
-<panist-results></panist-results>
-<panist-facets></panist-facets>
+  <panist-search></panist-search>
+  <panist-results></panist-results>
+  <panist-facets></panist-facets>
 
-<!-- Dependencies -->
+  <!-- Dependencies -->
 
-<script>
+  <script>
     var panistConfig = {
       // placer ici la configuration souhaitée, cf section suivante et le contenu de panistConfigDefault
-    };
-</script>
+      //Mentionnez ici le trigramme de votre établissement
+      idc: 'cnr',
+      //Mettez "true" pour afficher les liens vers les fichiers Full text sinon mettez false
+      showFulltext: true,
+      showPDF: true,
+      showZIP: true,
+      //Mettez "true" pour afficher les liens vers les fichiers Meta Donnée sinon mettez false
+      showMetadonnee: true,
+      showXML: true,
+      showMODS: true,
+      showJSON: true};
+  </script>
 
-<script src="//widgets.panist.fr/bower_components/angular/angular.min.js"></script>
-<script src="//widgets.panist.fr/slider/rzslider.js"></script>
-<script src="//widgets.panist.fr/app.min.js"></script>
+  <script src="//widgets.panist.fr/src/js/angular.min.js"></script>
+  <script src="//widgets.panist.fr/src/js/angular-sanitize.js"></script>
+  <script src="//widgets.panist.fr/src/js/select.js"></script>
+  <script src="//widgets.panist.fr/src/js/rzslider.js"></script>
+  <script src="//widgets.panist.fr/src/js/app.min.js"></script>
 
 </body>
 </html>
