@@ -8,7 +8,7 @@ Pour visualiser un exemple de disposition du widget cliquez sur le lien suivant 
   https://widgets.panist.fr
 
 ## Correspondances entre l'identifiant idc et le libellé des institutions
-  https://widgets.panist.fr/pdf/IdCouperin_NomInstitutions.pdf
+  https://widgets.panist.fr/pdf/Liste ayants droit Panist.pdf
 
 ## Usage classique des widgets
 
