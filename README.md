@@ -238,7 +238,7 @@ var panistConfigDefault = {
 ```
 
 Remarque : ces paramètres doivent être de préférence positionnés avant l'inclusion des fichiers app.min.js.
-Remarque 2 : la recherche des documents est libre, ainsi que l'accès aux méta-données mais l'accès au plein texte est restreint et nécessite la configuration de proxyApi. Pour plus de détails, vous pouvez [nous contacter](mailto:panist-contact@univ-lorraine.fr).
+Remarque 2 : la recherche des documents est libre, ainsi que l'accès aux méta-données mais l'accès au plein texte est restreint et nécessite la configuration de proxyApi. Pour plus de détails, vous pouvez [nous contacter](mailto:panist-liste@inist.fr).
 
 ## Fonctionnement du widget panistSearch
 
